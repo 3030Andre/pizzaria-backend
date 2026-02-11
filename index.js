@@ -2,12 +2,14 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.set('view engine', 'hbs')
+
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('principal')
 })
 
 app.get('/pedido', (req, res) => {
-  res.send('Página de pedido!')
+  res.render('pedidos')
 })
 
 app.listen(port, () => {

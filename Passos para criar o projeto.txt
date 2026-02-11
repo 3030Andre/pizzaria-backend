@@ -1,3 +1,6 @@
+## O que iremos usar no projeto para você procurar no youtube
+node express hbs
+
 ## O VS Code é um editor de programação
 O interessante do VS Code é que ele tem um terminal integrado.
 O terminal que estamos utilizando o é Commando Prompt
@@ -40,5 +43,6 @@ app.get('/pedido', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })`
+
 
 
