@@ -1,0 +1,44 @@
+## O VS Code é um editor de programação
+O interessante do VS Code é que ele tem um terminal integrado.
+O terminal que estamos utilizando o é Commando Prompt
+
+## Configurando o github
+
+Criamos a pasta do projeto no computador.
+Agora iremos conectar essa pasta com um repositório GitHub.
+Entramos no GitHub e criamos um repositório chamado pizzaria-backend
+Para conectar a pasta do computador com esse repositório digitamos algumas comandos no terminal.
+
+Para mandar as atualizações para o GitHub
+git add . 
+git commit -m "nome do envio"
+git push origin main
+
+## Configura o node no projeto
+
+Digitamos o comando npm init
+
+Agora iremos instalar o EXPRESS, o express é um pacote pronto para que fique muita mais fácil para fazermos páginas de internet
+
+Instalamos o express com o comando:
+npm install express --save
+
+Depois criamos o arquivo index.js e colocamos o código para iniciar o express.
+
+`const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.get('/pedido', (req, res) => {
+  res.send('Página de pedido!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port http://localhost:${port}`)
+})`
+
+
