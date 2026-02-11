@@ -1,5 +1,7 @@
 ## O que iremos usar no projeto para você procurar no youtube
-node express hbs
+node express hbs -> Se pesquisar isso no youtube, serão mais vídeos de configuração
+
+Dentro do arquivo .hbs nos escremos HTML - Se quiser aprenser HMLT tem que procurar no youtube sobre isso
 
 ## O VS Code é um editor de programação
 O interessante do VS Code é que ele tem um terminal integrado.
@@ -43,6 +45,8 @@ app.get('/pedido', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })`
+
+COMANDO PARA INICIAR O PROJETO: node index.js
 
 
 

@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// configura a pasta publica
+app.use(express.static('public'));
+// seta o hbs
 app.set('view engine', 'hbs')
 
 app.get('/', (req, res) => {
