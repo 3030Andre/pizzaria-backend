@@ -15,6 +15,10 @@ app.get('/pedido', (req, res) => {
   res.render('pedidos')
 })
 
+app.get('/item-selecionado', (req, res) => {
+  res.render('item-selecionado')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })

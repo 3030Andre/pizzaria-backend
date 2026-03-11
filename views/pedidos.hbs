@@ -12,20 +12,24 @@
         <img src="/img/logo.png" alt="">
     </div>
 
+    <a href="/" class="btn btn-primary">Voltar</a>
+
     {{!-- Linha 1 --}}
     <div class="row">
         {{!-- Linha 1 - Item 1 --}}
         <div class="col">
-            <div class="row bg-light rounded m-2">
-                <div class="col">
-                    <h3>Banana com canela</h3>
-                    <p>Ingredientes: ....</p>
-                    <p>R$ 90,50</p>
+            <a href="/item-selecionado">
+                <div class="row bg-light rounded m-2">
+                    <div class="col">
+                        <h3>Banana com canela</h3>
+                        <p>Ingredientes: ....</p>
+                        <p>R$ 90,50</p>
+                    </div>
+                    <div class="col">
+                        <img class="rounded w-100" src="/img/pizzas/bananacomcanela.jpg" alt="">
+                    </div>
                 </div>
-                <div class="col">
-                    <img class="rounded w-100" src="/img/pizzas/bananacomcanela.jpg" alt="">
-                </div>
-            </div>
+            </a>
         </div>
         {{!-- Linha 1 - Item 1 --}}
         <div class="col">
@@ -133,6 +137,5 @@
             </div>
         </div>
     </div>
-    <a href="/">Principal</a>
 </body>
 </html>
