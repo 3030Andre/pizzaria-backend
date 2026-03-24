@@ -32,9 +32,9 @@ CREATE TABLE pizzas (
 );
 
 INSERT INTO pizzas (nome, descricao, preco) VALUES
-('Banana com canela', 'Molho de tomate, mussarela, banana e canela', 90.50, '/img/pizzas/bananacomcanela.jpg'),
-('Frango com catupiry', 'Molho de tomate, mussarela, frango e catupiry', 90.50, '/img/pizzas/Frangocatupiry.jpg'),
+('Banana com canela', 'Molho de tomate, mussarela, banana e canela', 90.00, '/img/pizzas/bananacomcanela.jpg'),
+('Frango com catupiry', 'Molho de tomate, mussarela, frango e catupiry', 90.00, '/img/pizzas/Frangocatupiry.jpg'),
 ('Pizzadecalabresa', 'Molho de tomate, mussarela, calabresa e orégano s/Pizzadecalabresa.jpg'),
-('Pizzadecarnemoida', 'Molho de tomate, mussarela, carnemoida 0.50', '/img/pizzas/Pizzadecarnemoida'),
-('Banana com canela', 'Molho de tomate, mussarela, banana e canela', 90.50, '/img/pizzas/bananacomcanela.jpg'),
-('Banana com canela', 'Molho de tomate, mussarela, banana e canela', 90.50, '/img/pizzas/bananacomcanela.jpg')
+('Pizzadecarnemoida', 'Molho de tomate, mussarela, carnemoida, 90.00', '/img/pizzas/Pizzadecarnemoida'),
+('Pizzadebacon', 'Molho de tomate, mussarela, bacon e orégano', 90.00, '/img/pizzas/Pizzadebacon.jpg'),
+('Pizzaportuguesa', 'Molho de tomate, mussarela, presunto, ovo, cebola e orégano', 90.00, '/img/pizzas/Pizzaportuguesa.jpg')
