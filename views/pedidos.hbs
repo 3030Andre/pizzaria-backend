@@ -14,128 +14,23 @@
 
     <a href="/" class="btn btn-primary">Voltar</a>
 
-    {{!-- Linha 1 --}}
     <div class="row">
-        {{!-- Linha 1 - Item 1 --}}
-        <div class="col">
-            <a href="/item-selecionado">
-                <div class="row bg-light rounded m-2">
-                    <div class="col">
-                        <h3>Banana com canela</h3>
-                        <p>Ingredientes: ....</p>
-                        <p>R$ 90,50</p>
+        {{#each pizzas}}
+            <div class="col-6">
+                <a href="/item-selecionado" class="text-decoration-none text-body">
+                    <div class="row bg-light rounded m-2">
+                        <div class="col">
+                            <h3>{{nome}}</h3>
+                            <p>{{descricao}}</p>
+                            <p>{{preco}}</p>
+                        </div>
+                        <div class="col">
+                            <img class="rounded w-100" src="{{img}}" alt="">
+                        </div>
                     </div>
-                    <div class="col">
-                        <img class="rounded w-100" src="/img/pizzas/bananacomcanela.jpg" alt="">
-                    </div>
-                </div>
-            </a>
-        </div>
-        {{!-- Linha 1 - Item 1 --}}
-        <div class="col">
-            <div class="row bg-light rounded m-2">
-                <div class="col">
-                    <h3>Frango com catupiry</h3>
-                    <p>Ingredientes: ....</p>
-                    <p>R$ 90,50</p>
-                </div>
-                <div class="col">
-                    <img class="rounded w-100" src="/img/pizzas/Frangocatupiry.jpg" alt="">
-                </div>
+                </a>
             </div>
-        </div>
-    </div>
-
-
-    {{!-- Linha 2 --}}
-    <div class="row">
-        {{!-- Linha 2 - Item 1 --}}
-        <div class="col">
-            <div class="row bg-light rounded m-2">
-                <div class="col">
-                    <h3>Pizza de calabresa</h3>
-                    <p>Ingredientes: Molho de tomate, mussarela, calabresa e orégano.</p>
-                    <p>R$ 90,00</p>
-                </div>
-                <div class="col">
-                    <img class="rounded w-100" src="/img/pizzas/Pizzadecalabresa.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        {{!-- Linha 2 - Item 1 --}}
-        <div class="col">
-            <div class="row bg-light rounded m-2">
-                <div class="col">
-                    <h3>Pizza de carne moida</h3>
-                    <p>Ingredientes: Mussarela, carne moída e orégano</p>
-                    <p>R$ 90,00</p>
-                </div>
-                <div class="col">
-                    <img class="rounded w-100" src="/img/pizzas/Pizzadecarnemoida.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    {{!-- Linha 3 --}}
-    <div class="row">
-        {{!-- Linha 3 - Item 1 --}}
-        <div class="col">
-            <div class="row bg-light rounded m-2">
-                <div class="col">
-                    <h3>Pizza de coração</h3>
-                    <p>Ingredientes: Molho de tomate, mussarela, coração e orégano. </p>
-                    <p>R$ 90,00</p>
-                </div>
-                <div class="col">
-                    <img class="rounded w-100" src="/img/pizzas/Pizzadecoração.png" alt="">
-                </div>
-            </div>
-        </div>
-        {{!-- Linha 3 - Item 1 --}}
-        <div class="col">
-            <div class="row bg-light rounded m-2">
-                <div class="col">
-                    <h3>Pizza de portuguesa</h3>
-                    <p>Ingredientes: Molho de tomate, mussarela, presunto, cebola, ovos e orégano.</p>
-                    <p>R$ 90,00</p>
-                </div>
-                <div class="col">
-                    <img class="rounded w-100" src="/img/pizzas/Pizzaportuguesa.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{!-- Linha 4 --}}
-    <div class="row">
-        {{!-- Linha 4 - Item 1 --}}
-        <div class="col">
-            <div class="row bg-light rounded m-2">
-                <div class="col">
-                    <h3>Pizza de chocolate preto com morango</h3>
-                    <p>Ingredientes: Mussarela, chocolate preto e morango</p>
-                    <p>R$ 80,00</p>
-                </div>
-                <div class="col">
-                    <img class="rounded w-100" src="/img/pizzas/PizzadechocolatePcommorango.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        {{!-- Linha 4 - Item 1 --}}
-        <div class="col">
-            <div class="row bg-light rounded m-2">
-                <div class="col">
-                    <h3>Pizza de bacon</h3>
-                    <p>Ingredientes: Molho de tomate, mussarela, bacon e orégano.</p>
-                    <p>R$ 90,00</p>
-                </div>
-                <div class="col">
-                    <img class="rounded w-100" src="/img/pizzas/Pizza de bacon.jpg" alt="">
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
 </body>
 </html>

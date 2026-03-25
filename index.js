@@ -13,17 +13,13 @@ app.get('/', async (req, res) => {
 })
 
 app.get('/pedido', async (req, res) => {
-  res.render('pedidos')
+  await db.runSQLFile(); // cria o banco
+  const pizzas = await db.query('SELECT * FROM pizzas');
+  res.render('pedidos', {pizzas})
 })
 
 app.get('/item-selecionado', async (req, res) => {
   res.render('item-selecionado')
-})
-
-app.get('/db', async (req, res) => {
-  await db.runSQLFile();     // cria o banco
-  const pizzas = await db.query('SELECT * FROM pizzas');
-  res.send(pizzas);
 })
 
 app.listen(port, async () => {

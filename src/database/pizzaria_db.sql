@@ -35,6 +35,9 @@ INSERT INTO pizzas (nome, descricao, preco, img) VALUES
 ('Banana com canela', 'Molho de tomate, mussarela, banana e canela', 90.00, '/img/pizzas/bananacomcanela.jpg'),
 ('Frango com catupiry', 'Molho de tomate, mussarela, frango e catupiry', 90.00, '/img/pizzas/Frangocatupiry.jpg'),
 ('Pizzadecalabresa', 'Molho de tomate, mussarela, calabresa e orégano', 90.00, '/img/pizzas/Pizzadecalabresa.jpg'),
-('Pizzadecarnemoida', 'Molho de tomate, mussarela, carnemoida', 90.00, '/img/pizzas/Pizzadecarnemoida'),
-('Pizzadebacon', 'Molho de tomate, mussarela, bacon e orégano', 90.00, '/img/pizzas/Pizzadebacon.jpg'),
+('Pizzadecarnemoida', 'Molho de tomate, mussarela, carnemoida', 90.00, '/img/pizzas/Pizzadecarnemoida.jpg'),
+('Pizzadebacon', 'Molho de tomate, mussarela, bacon e orégano', 90.00, '/img/pizzas/Pizza de bacon.jpg'),
 ('Pizzaportuguesa', 'Molho de tomate, mussarela, presunto, ovo, cebola e orégano', 90.00, '/img/pizzas/Pizzaportuguesa.jpg')
+
+('PizzadechocolatePcommorango', 'Molho de tomate, mussarela, chocolate preto e morango', 80.00, '/img/pizzas/PizzadechocolatePcommorango.jpg')
+('Pizzaportuguesa', 'Molho de tomate, mussarela, presunto, ovo, cebola e orégano', 90.00, '/img/pizzas/Pizzadecoração.png')
