@@ -22,6 +22,10 @@ app.get('/item-selecionado', async (req, res) => {
   res.render('item-selecionado')
 })
 
+app.get('/cadastro-pizza', async (req, res) => {
+  res.render('cadastroPizza')
+})
+
 app.listen(port, async () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
