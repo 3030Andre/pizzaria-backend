@@ -6,7 +6,7 @@ const path = require('path');
 const dbConfig = {
   host: 'localhost',
   user: 'root',
-  password: 'admin',
+  password: 'aluno',
   database: 'pizzaria_db',
   waitForConnections: true,
   connectionLimit: 10,
