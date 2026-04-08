@@ -64,6 +64,14 @@ app.get('/reset-banco', async (req, res) => {
   res.render('principal');
 })
 
+app.get('/login', async (req, res) => {
+  res.render('loginUsuario');
+})
+
+app.get('/cadastro', async (req, res) => {
+  res.render('cadastroUsuario');
+})
+
 app.listen(port, async () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
