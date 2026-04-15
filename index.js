@@ -72,6 +72,16 @@ app.get('/cadastro', async (req, res) => {
   res.render('cadastroUsuario');
 })
 
+app.post('/cadastro-usuario', async (req, res) => {
+  console.log(req.body);
+  if(req.body)
+  {
+    const user = await db.query("INSERT INTO usuarios (nome, email, senha, telefone, papel) VALUES (?, ?, ?, ?, ?)", [req.body.nome, req.body.email, req.body.senha, req.body.telefone, 0]);
+    console.log(user)
+  }
+  res.redirect("/");
+})
+
 app.listen(port, async () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
