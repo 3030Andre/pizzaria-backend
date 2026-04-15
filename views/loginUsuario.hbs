@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="/css/principal.css">
 </head>
 <body class="container">
-    login
+    <div class="text-center">
+        <img src="/img/logo.png" alt="">
+    </div>
+    <form method="post" action="/login-usuario">
+        <div>
+             <label class="form-label" for="">Email</label>
+            <input class="form-control" type="text" name="email" placeholder="Digite seu email">
+        </div>
+        <div>
+             <label class="form-label" for="">Senha</label>
+            <input class="form-control" type="password" name="senha" placeholder="Digite sua senha">
+        </div>
+        <div class="my-2">
+            <button class="btn btn-success">Entrar</button>
+            <a class="btn btn-primary" href="/">Voltar</a>
+        </div>
+    </form>
 </body>
 </html>
