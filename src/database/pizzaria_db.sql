@@ -16,7 +16,7 @@ CREATE TABLE usuarios (
     email VARCHAR(255) UNIQUE NOT NULL,
     senha VARCHAR(255) NOT NULL,
     telefone VARCHAR(255),
-    papel INT NOT NULL,
+    papel INT NOT NULL,  -- 0 para usuário e 1 para admin
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
