@@ -46,7 +46,11 @@ app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })`
 
+(antigo)
 COMANDO PARA INICIAR O PROJETO: node index.js
 
+(novo)
+COMANDO PARA INICIAR O PROJETO: npm run dev
+ROTA PARA CRIAR O BANCO: http://localhost:3000/reset-banco
 
 
