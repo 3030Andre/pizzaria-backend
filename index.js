@@ -82,6 +82,10 @@ app.post('/cadastro-usuario', async (req, res) => {
   res.redirect("/");
 })
 
+app.get('/carrinho', async (req, res) => {
+  res.render('carrinho');
+})
+
 app.listen(port, async () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })

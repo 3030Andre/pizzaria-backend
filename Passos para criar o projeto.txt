@@ -53,4 +53,7 @@ COMANDO PARA INICIAR O PROJETO: node index.js
 COMANDO PARA INICIAR O PROJETO: npm run dev
 ROTA PARA CRIAR O BANCO: http://localhost:3000/reset-banco
 
+Link para a documentação do projeto
+https://docs.google.com/document/d/1tUfH4yqAZlqTTvXC0oJ8diFYZaEW38Sj/edit
+
 
