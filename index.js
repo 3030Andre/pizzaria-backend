@@ -48,7 +48,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', async (req, res) => {
-  res.render('principal')
+  const user = req.session.usuario ? req.session.usuario : null;
+  res.render('principal', { user: user })
 })
 
 app.get('/pedido', verificarLogin, async (req, res) => {
@@ -125,6 +126,18 @@ app.post('/login-usuario', async (req, res) => {
 app.get('/carrinho', verificarLogin, async (req, res) => {
   res.render('carrinho');
 })
+
+app.get('/logout', verificarLogin, (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(err);
+      return res.redirect('/');
+    }
+
+    res.clearCookie('connect.sid'); // limpa o cookie da sessão
+    res.redirect('/');
+  });
+});
 
 app.listen(port, async () => {
   console.log(`Example app listening on port http://localhost:${port}`)
