@@ -21,6 +21,22 @@ CREATE TABLE usuarios (
 );
 
 -- =========================
+-- TABELA: pedido
+-- =========================
+CREATE TABLE pedido (
+  id INT NOT NULL,
+  usuarios_id INT NOT NULL,
+  estado CHAR(1) NULL,
+  PRIMARY KEY (`id`),
+  INDEX fk_pedido_usuarios1_idx (usuarios_id ASC) VISIBLE,
+  CONSTRAINT fk_pedido_usuarios1
+    FOREIGN KEY (usuarios_id)
+    REFERENCES usuarios (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+-- =========================
 -- TABELA: pizzas
 -- =========================
 CREATE TABLE pizzas (
@@ -30,6 +46,28 @@ CREATE TABLE pizzas (
     preco DECIMAL(10,2) NOT NULL,
     img VARCHAR(255) NOT NULL,
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- =========================
+-- TABELA: pedido_pizzas
+-- =========================
+CREATE TABLE pedido_pizzas (
+  pedido_id INT NOT NULL,
+  pizzas_id INT NOT NULL,
+  quantidade INT NOT NULL,
+  PRIMARY KEY (pedido_id, pizzas_id),
+  INDEX fk_pedido_has_pizzas_pizzas1_idx (pizzas_id ASC) VISIBLE,
+  INDEX fk_pedido_has_pizzas_pedido_idx (pedido_id ASC) VISIBLE,
+  CONSTRAINT fk_pedido_has_pizzas_pedido
+    FOREIGN KEY (pedido_id)
+    REFERENCES pedido (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT fk_pedido_has_pizzas_pizzas1
+    FOREIGN KEY (pizzas_id)
+    REFERENCES pizzas (id)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
 );
 
 INSERT INTO pizzas (nome, descricao, preco, img) VALUES
