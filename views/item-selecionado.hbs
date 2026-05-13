@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de pedidos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</head>
-<body class="container"> 
-      <div class="text-center">
-        <img src="/img/logo.png" alt="">
-    </div>
-    <div>
-        <h5>Borda</h5>
-        <div>
-            <input type="radio" name="borda" id="id-radio-sem-borda">
-            <label for="id-radio-sem-borda">Sem borda</label>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tela de pedidos</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    </head>
+    <body class="container">
+        <div class="text-center">
+            <img src="/img/logo.png" alt>
+        </div>
+        <div class="text-center my-2">
+            <img src="{{pizza.img}}" class="rounded">
         </div>
         <div>
-            <input type="radio" name="borda" id="id-radio-catupiry">
-            <label for="id-radio-catupiry">Catupiry</label>
-        </div>
-        <div>
-            <input type="radio" name="borda" id="id-radio-chedar">
-            <label for="id-radio-chedar">Chedar</label>
-        </div>
-    </div>
-    <div>
-        <label for="">Observações</label>
-        <div>
-            <textarea class="form-control" name="" id="" rows="4" cols="150"></textarea>
-        </div>
-    </div>
-
-    <div>
-            <div class="row">
-                <div class="col">
-                    <a href="/pedido" class="btn btn-primary w-100">Voltar</a>
+            <form method="post" action="/adicionar-item">
+                <input type="hidden" name="id" value="{{pizza.id}}">
+                <h5>Borda</h5>
+                <div>
+                    <input type="radio" checked name="borda"
+                        id="id-radio-sem-borda" value="sem_borda">
+                    <label for="id-radio-sem-borda">Sem borda</label>
                 </div>
-                <div class="col">
-                    <a href="/carrinho" class="btn btn-primary w-100">Adicionar</a>
+                <div>
+                    <input type="radio" name="borda" id="id-radio-catupiry" value="catupiry">
+                    <label for="id-radio-catupiry">Catupiry</label>
+                </div>
+                <div>
+                    <input type="radio" name="borda" id="id-radio-chedar" value="chedar">
+                    <label for="id-radio-chedar">Chedar</label>
                 </div>
             </div>
-        </div>
-</body>
+            <div>
+                <label for>Observações</label>
+                <div>
+                    <textarea class="form-control" name="observacoes" rows="4"
+                        cols="150">Sem observações.</textarea>
+                </div>
+            </div>
+
+            <div class="my-2">
+                <div class="row">
+                    <div class="col">
+                        <a href="/pedido"
+                            class="btn btn-primary w-100">Voltar</a>
+                    </div>
+                    <div class="col">
+                        <button type="submit"
+                            class="btn btn-primary w-100">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
 </html>

@@ -24,10 +24,10 @@ CREATE TABLE usuarios (
 -- TABELA: pedido
 -- =========================
 CREATE TABLE pedido (
-  id INT NOT NULL,
+  id INT AUTO_INCREMENT NOT NULL,
   usuarios_id INT NOT NULL,
   estado CHAR(1) NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (id),
   INDEX fk_pedido_usuarios1_idx (usuarios_id ASC) VISIBLE,
   CONSTRAINT fk_pedido_usuarios1
     FOREIGN KEY (usuarios_id)

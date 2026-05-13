@@ -58,8 +58,9 @@ app.get('/pedido', verificarLogin, async (req, res) => {
   res.render('pedidos', { pizzas })
 })
 
-app.get('/item-selecionado', verificarLogin, async (req, res) => {
-  res.render('item-selecionado')
+app.get('/item-selecionado/:id', verificarLogin, async (req, res) => {
+  const pizza = await db.query('SELECT * FROM pizzas where id = ?', [req.params.id]);
+  res.render('item-selecionado', { pizza: pizza[0] });
 })
 
 app.get('/cadastro-pizza', verificarLogin, async (req, res) => {
@@ -173,6 +174,33 @@ app.get('/logout', verificarLogin, (req, res) => {
     res.clearCookie('connect.sid'); // limpa o cookie da sessão
     res.redirect('/');
   });
+});
+
+app.post('/adicionar-item', async (req, res) => {
+  if (req.body) {
+    // verificar se existe um carrinho aberto desse usuário
+    let pedido = await db.query(
+      "SELECT * FROM pedido WHERE pedido.usuarios_id = ? and pedido.estado = ?",
+      [req.session.usuario.id, "c"]
+    );
+    // se não econtrou, criar um pedido no estado carrinho
+    if (!pedido[0]) {
+      const result = await db.query("INSERT INTO pedido (usuarios_id, estado) VALUES (?, ?)", [req.session.usuario.id, "c"]);
+      pedido = await db.query(
+        "SELECT * FROM pedido WHERE pedido.usuarios_id = ? and pedido.estado = ?",
+        [req.session.usuario.id, "c"]
+      );
+    }
+
+    // Pedido para inserir as pizzas
+    console.log(pedido[0]);
+
+    const result = await db.query("INSERT INTO pedido_pizzas (pedido_id, pizzas_id, quantidade) VALUES (?, ?, ?)", [pedido[0].id, req.body.id, 1]);
+
+    // continuar
+  }
+
+  res.redirect("/carrinho");
 });
 
 app.listen(port, async () => {
