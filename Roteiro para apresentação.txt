@@ -1,0 +1,25 @@
+1 - Apresentar a tela inicial.
+
+2 - Cadastrar um usuário
+
+3 - Entrar com o usuário
+
+4 - Apresentar a tela do usuário logado
+
+5 - Deslogar do sistema
+
+6 - Logar novamente
+
+7 - Cadastra uma pizza
+
+8 - Quando cadastrar a pizza já vai para a tela de pedido
+
+9 - Apresentar tela de item selecionado (ciclando em uma pizza)
+
+10 - Apresentar tela carrinho (com a primeira pizza adicionada)
+
+11 - Adicionar uma outra pizza no carrinho
+
+12 - Fechar a compra do carrinho
+
+13 - Mostrar a tela de pedidos encaminhados

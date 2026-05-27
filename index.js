@@ -157,7 +157,11 @@ app.get('/cadastro', async (req, res) => {
 app.post('/cadastro-usuario', async (req, res) => {
   console.log(req.body);
   if (req.body) {
-    const user = await db.query("INSERT INTO usuarios (nome, email, senha, telefone, papel) VALUES (?, ?, ?, ?, ?)", [req.body.nome, req.body.email, req.body.senha, req.body.telefone, 0]);
+    try {
+      const user = await db.query("INSERT INTO usuarios (nome, email, senha, telefone, papel) VALUES (?, ?, ?, ?, ?)", [req.body.nome, req.body.email, req.body.senha, req.body.telefone, 0]);
+    } catch (error) {
+      res.redirect("/");
+    }
     console.log(user)
   }
   res.redirect("/");
